@@ -125,7 +125,7 @@ presence.on('UpdateData', async () => {
                 : 'Browsing'
 
           presenceData.state
-= document.querySelector('.text-uppercase')?.textContent
+            = document.querySelector('.text-uppercase')?.textContent
           presenceData.smallImageKey = Assets.Reading
           presenceData.smallImageText = `Published by: ${document.querySelector('strong')?.textContent}`
           presenceData.buttons = [{ label: 'Read Article', url: href }]
@@ -171,10 +171,10 @@ presence.on('UpdateData', async () => {
                 ? 'Viewing page'
                 : 'Browsing'
           presenceData.state
-= document.querySelector('.product_section')?.textContent
+            = document.querySelector('.product_section')?.textContent
           presenceData.buttons = [{ label: 'View Product', url: href }]
           presenceData.largeImageKey
-= document.querySelector<HTMLImageElement>('[alt="IMG-PRODUCT"]')
+            = document.querySelector<HTMLImageElement>('[alt="IMG-PRODUCT"]')
               ?.src ?? ActivityAssets.Logo
           break
         }
@@ -203,7 +203,7 @@ presence.on('UpdateData', async () => {
       switch (true) {
         case !!document.querySelector('.menu-item.active'): {
           presenceData.state
-= privacy === 0 || privacy === 1
+            = privacy === 0 || privacy === 1
               ? `Viewing ${document.querySelector('.menu-item.active')?.textContent}`
               : privacy === 2
                 ? 'Viewing a page'
@@ -240,7 +240,7 @@ presence.on('UpdateData', async () => {
             ?.textContent
             ?.split(' |')?.[0]
           presenceData.largeImageKey
-= document
+            = document
               .querySelector<HTMLImageElement>('.user-avatar-section')
               ?.querySelector('img')
               ?.src ?? ActivityAssets.Logo
@@ -401,7 +401,7 @@ presence.on('UpdateData', async () => {
         }
         case pathname.includes('/profile/'): {
           presenceData.largeImageKey
-= document.querySelector<HTMLImageElement>(
+            = document.querySelector<HTMLImageElement>(
               '.user-avatar-section > div > img',
             )?.src ?? ActivityAssets.AirlinesLogo
 
